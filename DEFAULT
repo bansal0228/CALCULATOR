@@ -1,0 +1,95 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default4.aspx.cs" Inherits="Default4" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <script language="javascript">
+
+    var tempResult
+        function displayNumber(btnActive) {
+
+            document.getElementById("result").value =   document.getElementById("result").value  + btnActive.value
+
+        }
+
+        function sum() {
+
+            tempResult = document.getElementById("result").value
+            document.getElementById("result").value  = ''
+        }
+
+        function equals() {
+         
+            document.getElementById("result").value  = parseInt( document.getElementById("result").value )+ parseInt( tempResult)
+        }
+
+
+    </script>
+
+    <div>
+     
+        
+        
+
+        <table border="3" cellspacing="9" cellpadding="3" >
+        <tr>
+        <input type="textbox" id="result" />
+        </tr>
+            <tr>
+                <td>
+                    <input type="button" value="7" onclick="displayNumber(this)" id="7" />
+                </td>
+                <td>
+                    <input type="button" value="8" onclick="displayNumber(this)" id="8" />
+                </td>
+                <td>
+                    <input type="button" value="9" onclick="displayNumber(this)" id="9" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="4" onclick="displayNumber(this)" id="4" />
+                </td>
+                <td>
+                    <input type="button" value="5"  onclick="displayNumber(this)" id="5" />
+                </td>
+                <td>
+                    <input type="button" value="6" onclick="displayNumber(this)" id="6" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="1" onclick="displayNumber(this)" id="1" />
+                </td>
+                <td>
+                    <input type="button" value="2" onclick="displayNumber(this)" id="2" />
+                </td>
+                <td>
+                    <input type="button" value="3" onclick="displayNumber(this)" id="3" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="0" onclick="displayNumber(this)" id="0" />
+                </td>
+                <td>
+                    <input type="button" value="c" id="c" />
+                </td>
+                <td>
+                    <input type="button" value="=" id="="  onclick="equals()" />
+                </td>
+            </tr>
+        <tr>
+            <td> <input type="button" value="+" onclick="sum()" id="+" /> </td>
+            <td> <input type="button" value="-" id="-" /> </td>
+            <td> <input type="button" value="*" id="*" /> </td>
+        </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>
